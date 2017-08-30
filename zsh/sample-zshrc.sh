@@ -4,9 +4,6 @@ export XDG_CONFIG_HOME=~/.config
 
 # User specific aliases and functions
 export WORKSPACE=~/Workspace
-export IDEA_JDK=/usr/java/latest
-export JAVA_HOME=/usr/java/latest
-export JDK_HOME=/usr/java/latest
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
