@@ -71,5 +71,17 @@ function cpdb() {
 }
 
 function cpwar() {
-  cp -r $TDFDB_HOME/war/dashboard $RIAK_HOME/release/tmp/webapp
+  local version=$1
+  if [ "$version" = "tdf" ]
+  then
+    echo "Copying ${TDFDB_HOME}/war/dashboard to ${RIAK_HOME}/release/tmp/webapp"
+    cp -r $TDFDB_HOME/war/dashboard $RIAK_HOME/release/tmp/webapp
+  elif
+  then
+    echo "Copying ${LLOYDS_HOME}/war/dashboard to ${RIAK_HOME}/release/tmp/webapp"
+    cp -r $LLOYDS_HOME/war/dashboard $RIAK_HOME/release/tmp/webapp
+  else
+    echo "Please enter lloyds or tdf"
+  fi
+  echo "Copy has completed."
 }
