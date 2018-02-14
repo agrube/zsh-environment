@@ -7,6 +7,8 @@ export GRADLE_HOME=$WORKSPACE/lib/gradle/gradle-4.0
 export VAGRANT_HOME=/cygdrive/c/HashiCorp/Vagrant
 export CHOCO_HOME=/cygdrive/c/ProgramData/chocolatey
 export PS_HOME=/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0/
+export NODE_HOME=/cygdrive/c/Program\ Files/nodejs
+export NPM_HOME=~/AppData/Roaming/npm/node_modules
 
 function setpath() {
   unset PATH
@@ -25,6 +27,8 @@ function setpath() {
   PATH=$PATH:${VAGRANT_HOME}/bin
   PATH=$PATH:${CHOCO_HOME}/bin
   PATH=$PATH:${PS_HOME}
+  PATH=$PATH:${NODE_HOME}
+  PATH=$PATH:${NPM_HOME}/@angular/cli/bin
   export PATH
 }
 
