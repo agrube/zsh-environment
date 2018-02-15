@@ -1,5 +1,5 @@
 export JAVA=$WORKSPACE/lib/java
-
+export JAVA_HOME=/cygdrive/c/Program\ Files/Java/jdk1.8.0_162
 export ASSAULT_HOME=$WORKSPACE/lib/assault/release
 export PROTO_HOME=$WORKSPACE/lib/protoc
 export SUBLIME_HOME=/cygdrive/c/Program\ Files/Sublime\ Text\ 3/
