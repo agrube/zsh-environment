@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<settings>
+	<console>
+		<colors>
+			<color id="0" r="130" g="179" b="173"/>				<!-- Black -->
+			<color id="1" r="130" g="179" b="173"/>			<!-- DarkBlue -->
+			<color id="2" r="181" g="189" b="104"/>			<!-- DarkGreen (Git Diff) -->
+			<color id="3" r="68" g="193" b="188"/>			<!-- DarkCyan (String) -->
+			<color id="4" r="204" g="102" b="102"/>			<!-- DarkRed (Git Diff) -->
+			<color id="5" r="174" g="129" b="255"/>			<!-- DarkMagenta -->
+			<color id="6" r="222" g="147" b="95"/>			<!-- DarkYellow -->
+			<color id="7" r="192" g="195" b="193"/>			<!-- Gray (Default Text) -->
+			<color id="8" r="117" g="113" b="94"/>			<!-- DarkGray (Parameter) -->
+			<color id="9" r="130" g="179" b="173"/>			<!-- Blue -->
+			<color id="10" r="181" g="189" b="104"/>		<!-- Green -->
+			<color id="11" r="68" g="193" b="188"/>		<!-- Cyan -->
+			<color id="12" r="215" g="90" b="100"/>			<!-- Red -->
+			<color id="13" r="250" g="69" b="148"/>			<!-- Magenta -->
+			<color id="14" r="240" g="198" b="116"/>		<!-- Yellow -->
+			<color id="15" r="214" g="214" b="214"/>		<!-- White (Number, Diff Text) -->
+		</colors>
+	</console>
+	<tabs>
+		<tab>
+			<cursor style="0" r="73" g="72" b="62"/>
+			<background type="0" r="29" g="31" b="33">
+				<image file="" relative="0" extend="0" position="0">
+					<tint opacity="0" r="0" g="0" b="0"/>
+				</image>
+			</background>
+		</tab>
+	</tabs>
+</settings>
