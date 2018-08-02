@@ -6,7 +6,7 @@ export CVS_RSH=/usr/bin/ssh
 CLICOLOR=1 # Enables color in the terminal bash shell export
 LSCOLORS=gxfxcxdxbxegedabagacad # Sets up the color scheme for list export
 export LSCOLORS
-alias ls='ls --color'
+alias ls='ls'
 
 export WORKSPACE=~/Workspace
 export DEV=$WORKSPACE/dev
@@ -21,3 +21,25 @@ alias rm='rm -i';
 alias classpath='echo $CLASSPATH | tr ":" "\n"'
 alias jgrep='find ./ -iname "*.java" | xargs grep -F'
 alias liquibaseu='liquibase --driverPropertiesFile=C:/cygwin/usr/local/lib/liquibase/liquibase.properties'
+alias subl='subl.exe'
+
+function intellij-fix()
+{
+  echo "Replacing /mnt/c with C:"
+  find . -name "*.iml" -print0 | xargs -0 sed -i '' -e 's/\/mnt\/c/C\:/g'
+}
+
+function loadPathFile()
+{
+  PATH=/usr/bin:/bin
+  local os_ver="$(uname -a)"
+  local is_linux=$(echo ${os_ver:0:1})
+  if [[ "$is_linux" == "L" ]];
+  then 
+    source ~/.dotfiles/zsh/solipsys-linux-path.sh
+    echo "Using Linux Solipsys Configuration!"
+  else
+    source ~/.dotfiles/zsh/solipsys-path.sh
+    echo "Using Cygwin Solipsys Configuration!"
+  fi
+}
