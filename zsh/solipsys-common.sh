@@ -26,7 +26,7 @@ alias subl='subl.exe'
 function intellij-fix()
 {
   echo "Replacing /mnt/c with C:"
-  find . -name "*.iml" -print0 | xargs -0 sed -i '' -e 's/\/mnt\/c/C\:/g'
+  find . -name ".classpath" -print0 | xargs -0 sed -i '' -e 's/\/mnt\/c/C\:/g'
 }
 
 function loadPathFile()
@@ -43,3 +43,13 @@ function loadPathFile()
     echo "Using Cygwin Solipsys Configuration!"
   fi
 }
+
+cleanReleaseDirs() {
+  find . -name release -type d | xargs rm -rf
+  find . -wholename *build/jar -type d | xargs rm -rf
+  find . -wholename *build/protoclasses -type d | xargs rm -rf
+} 
+
+fixClassPaths() {
+  find . -name .classpath -exec sed -i 's/\/mnt\/c/C:/g' {} \;
+} 

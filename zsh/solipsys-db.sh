@@ -1,10 +1,21 @@
-export DB_HOME=$DEV/core/5.x
+export DB_HOME=$DEV/core/db
+export PORTAL2_HOME=$DB_HOME/thin-client/webapp
 export TDFDB_HOME=$DB_HOME/metamorph/tdfdb/common
 export TDFDB_P_HOME=$DB_HOME/metamorph/tdfdb/postgres-impl
 export MSCTDB_HOME=$DB_HOME/mud/msctdb/common
 export DB_RELEASE_HOME=$DB_HOME/athena-display/athenadb/postgres-impl
 export ATHENA_HOME=$DB_HOME/athena-display/athena
 export LLOYDS_HOME=$DB_HOME/athena-extensions/lloyds
+
+function updatesol()
+{
+  echo "Building sol"
+  cd $PORTAL2_HOME
+  npm run build:sol
+  echo "Copying sol to TDFDB"
+  cp -r dist/libs/sol $TDFDB_HOME/webapp/node_modules/@solipsys
+  echo "Update for @solipsys/sol complete!"
+}
 
 function cleandb()
 {

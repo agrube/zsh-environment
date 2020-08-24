@@ -64,7 +64,7 @@ function setjava() {
 }
 
 funciton setant() {
-  export ANT_OPTS="-Xmx128m -DJAVA_HOME=C:/Progra~1/Java/jdk1.8.0_162 -DASSAULT_HOME=$(cygpath -m ${ASSAULT_HOME}) -Djava.endorsed.dirs=$(cygpath -m ${ASSAULT_HOME})/lib/xalan-2.7 -DLicense.dir=$(cygpath -m ${LICENSE_DIR})"
+  export ANT_OPTS="-Xmx1024m -DJAVA_HOME=C:/Progra~1/Java/jdk1.8.0_162 -DASSAULT_HOME=$(cygpath -m ${ASSAULT_HOME}) -Djava.endorsed.dirs=$(cygpath -m ${ASSAULT_HOME})/lib/xalan-2.7 -DLicense.dir=$(cygpath -m ${LICENSE_DIR})"
   export ANT_ARGS="-s build.xml"
   setpath
 }
