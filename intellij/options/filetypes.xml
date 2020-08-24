@@ -1,0 +1,15 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="EscortMissionModel" type="PLAIN_TEXT" />
+      <mapping pattern="SharedRouteDatabaseSetup.java" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping pattern="AircracftMissionLocationModel" type="PLAIN_TEXT" />
+      <mapping ext="backup" type="PLAIN_TEXT" />
+      <mapping ext="bak" type="PLAIN_TEXT" />
+      <mapping ext="prp" type="PLAIN_TEXT" />
+      <mapping ext="dat" type="PLAIN_TEXT" />
+      <mapping ext="plg" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

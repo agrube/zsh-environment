@@ -1,0 +1,13 @@
+<templateSet group="other">
+  <template name="hdrcmt" value="/**&#10; *&#10; * @author Alex Grube&#10; * @since &#10; */" description="Header Comment" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="psflgr" value="private static final Logger log = Logger.getLogger( $CLASS$.class );" description="Create a logger for the class" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="Object" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

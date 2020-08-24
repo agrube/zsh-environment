@@ -1,0 +1,6 @@
+Batch Scripts Support
+CMD Support
+Statistic
+com.chrisrm.idea.MaterialThemeUI
+com.intellij.plugins.watcher
+intellij.prettierJS

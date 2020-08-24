@@ -1,0 +1,64 @@
+<templateSet group="Solipsys">
+  <template name="setp" value="public void set$CNAME$( $VAR$ $NAME$ )&#10;{&#10;  if ( this.$NAME$ != $NAME$ )&#10;  {&#10;    $VAR$ oldValue = this.$NAME$;&#10;    this.$NAME$ = $NAME$;&#10;    fireStateChanged( &quot;$NAME$&quot;, oldValue, this.$NAME$ ); //$NON-NLS-1$&#10;  }&#10;}" description="Model getter for a primitive value" toReformat="false" toShortenFQNames="true">
+    <variable name="CNAME" expression="" defaultValue="Name" alwaysStopAt="true" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="int" alwaysStopAt="true" />
+    <variable name="NAME" expression="decapitalize(CNAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="seto" value="public void set$CNAME$( $VAR$ $NAME$ )&#10;{&#10;  if ( this.$NAME$ == null ? $NAME$ != null : !this.$NAME$.equals( $NAME$ ) )&#10;  {&#10;    $VAR$ oldValue = this.$NAME$;&#10;    this.$NAME$ = $NAME$;&#10;    fireStateChanged( &quot;$NAME$&quot;, oldValue, this.$NAME$ ); //$NON-NLS-1$&#10;  }&#10;}" description="Model getter for an Object value" toReformat="false" toShortenFQNames="true">
+    <variable name="CNAME" expression="" defaultValue="Name" alwaysStopAt="true" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="Object" alwaysStopAt="true" />
+    <variable name="NAME" expression="decapitalize(CNAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="setnno" value="public void set$CNAME$( $VAR$ $NAME$ )&#10;{&#10;  if ( $NAME$ == null )&#10;  {&#10;    throw new NullPointerException( &quot;$NAME$ can't be null&quot; ); //$NON-NLS-1$&#10;  }&#10;    &#10;  if ( !this.$NAME$.equals( $NAME$ ) )&#10;  {&#10;    $VAR$ oldValue = this.$NAME$;&#10;    this.$NAME$ = $NAME$;&#10;    fireStateChanged( &quot;$NAME$&quot;, oldValue, this.$NAME$ ); //$NON-NLS-1$&#10;  }&#10;}" description="Model getter for an Object value" toReformat="false" toShortenFQNames="true">
+    <variable name="CNAME" expression="" defaultValue="Name" alwaysStopAt="true" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="Object" alwaysStopAt="true" />
+    <variable name="NAME" expression="decapitalize(CNAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="msctcmd" value="try&#10;{&#10;  Optional&lt;$VAR$&gt; result =&#10;    executeCommand( $COMMAND$, res -&gt; {&#10;      return new $VAR$();&#10;      } );&#10;  return result.isPresent() ? result.get() : new $VAR$();&#10;}&#10;catch ( IOException e )&#10;{&#10;  log.error( e.getMessage() );&#10;  return new $VAR$();&#10;}" description="Creates a stub to execute an MSCT command using the SSH Client." toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="Object" alwaysStopAt="true" />
+    <variable name="COMMAND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+  <template name="nonnls" value="//$NON-NLS-1$" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="sngltn" value="class Factory &#10;{&#10;  private static final Singleton&lt;$INTERFACE$&gt; singleton =&#10;      new Singleton&lt;&gt;( RESOURCE_NAME, $INTERFACE$.class,&#10;          Default$INTERFACE$.class );&#10;&#10;  /**&#10;   * Returns the singleton instance of the {@link $INTERFACE$} class.&#10;   **/&#10;  public synchronized static $INTERFACE$ getDefault()&#10;  {&#10;    return singleton.getDefault();&#10;  }&#10;}" description="Creates a Singleton Factory class." toReformat="false" toShortenFQNames="true">
+    <variable name="INTERFACE" expression="className()" defaultValue="Object" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="rsrcs" value="private static final Resources resources = ResourceManager.getDefault()&#10;      .getResources( $CLASS$.class );" description="Creates a resources object for the class." toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="qualifiedClassName()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="srlzr" value="public void serialize( $CLASSTYPE$ $OBJECTNAME$, JsonGenerator gen,&#10;  SerializerProvider serializerProvider ) throws IOException&#10;{&#10;  gen.writeStartObject();&#10;  try&#10;  {&#10;&#10;  }&#10;  catch ( IOException e )&#10;  {&#10;    log.error( &quot;Failed to serialize $CLASSTYPE$: &quot; + e );&#10;  }&#10;  finally&#10;  {&#10;    gen.writeEndObject();&#10;  }&#10;}" description="Serializers" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASSTYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OBJECTNAME" expression="" defaultValue="obj" alwaysStopAt="true" />
+    <context>
+      <option name="COMPLETION" value="false" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+</templateSet>

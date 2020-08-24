@@ -1,0 +1,28 @@
+<keymap version="1" name="Default copy 1" parent="$default">
+  <action id="Diff.NextChange" />
+  <action id="Diff.PrevChange" />
+  <action id="EditorUnSelectWord" />
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="alt right" />
+  </action>
+  <action id="NextTab" />
+  <action id="PrevSplitter">
+    <keyboard-shortcut first-keystroke="alt left" />
+  </action>
+  <action id="PreviousTab" />
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="ctrl alt r" />
+  </action>
+  <action id="Terminal.SwitchFocusToEditor" />
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
+  </action>
+  <action id="UpdateRunningApplication" />
+  <action id="Vcs.ReformatCommitMessage" />
+  <action id="android.deploy.ApplyChanges">
+    <keyboard-shortcut first-keystroke="ctrl f10" />
+  </action>
+  <action id="android.deploy.CodeSwap">
+    <keyboard-shortcut first-keystroke="ctrl alt f10" />
+  </action>
+</keymap>
